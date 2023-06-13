@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="styleshett" href="soli web.css">
+      <link rel="styleshett" href="font awesome/css/font.css">
+    <title>Solicitor</title>
+</head> 
+<body>
+    <header class="header" id="home">
+        <div class="nav">
+            <div class="navigation container">
+                <div class="logo">
+                   <h1><img class="ball" src="img/ball.png"><span>.</span></h1>
+                </div> 
+                   <div class="menu">
+                     <div class="top-nav">
+                        <div class="logo">
+                            <h1><football><span>.</span></h1> 
+                        </div>
+                          <div class="close">
+                            <button>close</button>
+                     </div>
+                      </div>
+                    <ul class="nav-list">
+                        <li class="nav-items">
+                            <a href="soli web.html" class="nav-link">Home</a>
+                        </li>
+                        
+                        <li class="nav-items">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+
+                        <li class="nav-items">
+                            <a href="services.html" class="nav-link">Services</a>
+                        </li>
+
+                        <li class="nav-items">
+                            <a href="News.html" class="nav-link">News</a>
+                        </li>
+
+                        <li class="nav-items">
+                            <a href="team.html" class="nav-link">Team</a>
+                        </li>
+
+                        <li class="nav-items">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+
+                        <li class="nav-items">
+                            <a href="join.html" class="nav-link">Join</a>
+                        </li>
+                    </ul>
+                   </div>
+                          <div class="hamburger">
+                            <button class="menu1" onclick="menu" id="menu">Menu</button>
+                          </div>
+                </div>
+            </div>
+        </div>
+        <img class="ronaldo" src="img/imgg.png" alt="">
+        
+        <div class="hero">
+            <h3>Solicitor</h3>
+            <h1>Football Academy</h1>
+            <h4>We have<span id="type1">Footballer & Trainer</span></h4>
+            <a href="hireplayer.html">Hire Player</a>
+        </div>
+    </header>
+       
+                      
+</body>
+</html>
+
+
+<style>
+.menu1 {
+    display: none;
+}
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: white;
+    color: #000;
+}
+
+h1,h2,h3,h4 {
+    font-weight: 500;
+}
+
+* {
+    text-decoration: none;
+}
+
+img .ronaldo{
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+
+.container {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: 1;
+}
+
+.ronaldo {
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    width: 50rem;
+    z-index: -1;
+}
+
+.nav {
+    color: #fff;
+
+}
+
+.top-nav {
+    display: none;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1 {
+   font-size: 2.5rem;
+   color: #fff;
+}
+
+.logo h1 span {
+    font-weight: bold;
+    color: rgb(187, 235, 13);
+}
+
+.nav-list {
+   display: flex;
+   align-items: center;
+}
+
+.nav-item:not(:last-child) {
+    margin: 0.1rem;
+}
+
+.nav-link:link,.nav-link:visited {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    transition: all 300ms ease-in-out;  
+} 
+
+.nav-link:hover {
+    border-radius: 0.3rem;
+    background-color: yellow;
+    color: #000;
+    font-weight: bold;
+}
+
+/* hero */
+.hero {
+    position: absolute;
+    top: 50%;
+    left: -7%;
+    transform: translate(25%, -50%);
+    color:#fff
+}
+.hero h3 {
+    font-weight: bold;
+    color: yellow;
+    font-size: 3rem;
+}
+.hero h1 {
+    font-size: 4.5rem;    
+}
+.hero h4 {
+    font-size: 2rem;
+}
+.hero h4 span {
+    color: rgb(197, 230, 10);
+    text-decoration: underline;
+}
+.hero h4 span:hover {
+    color: yellow;
+    background-color: red;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5%;
+}
+
+.hero a:link, .hero a:visited {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    border-color: 1px salmon #dd9a05;
+    background-color:#dd9a05;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+.hero a:hover{
+    background-color: transparent;
+}
+
+.ball {
+    width: 4rem;
+    height: auto;
+}
+
+/* 
+responsive {
+@media only screen and (max-width:1200px){
+     .container{
+        padding: 0.3rem;
+     }
+}
+@media only screen and (max-width:996px){
+     .header {
+        max-width: 100vh;
+     } 
+     .header img {
+        width: 30rem;
+     }
+}
+@media only screen and (max-width:768px){
+     .header img {
+        width: 20rem;
+     }
+}
+@media only screen and (max-width:500px){
+     .header {
+        min-height: 100vh;
+     }
+     .header img {
+        width: 35rem;
+     }
+}
+ 
+@media only screen and (max-width:768px){
+     .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        max-width: 40rem;
+        background: #fff;
+        transition: all 500ms ease-in-out;
+        z-index: 190;
+     }
+     .menu .show {
+        left: 0;
+     }    
+     .top-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(198, 231, 11);
+        padding: 1rem 1.5rem;
+        }
+     .top-nav .logo span {
+        color: #fff;
+     } 
+     .top-nav .close {
+        color: #fff;
+        font-size: 2.3rem;
+        padding: 1rem;
+        cursor: pointer;
+     }
+    .hamburger {
+        display: block;
+        color: #fff;
+        font-size: 2.5rem;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    .nav-link:link,.nav-link:visited{
+        display: block;
+        font-size: 1.7rem;
+        color: #222;
+        padding: 1rem 0;
+    }
+    .nav-list {
+        flex-direction: column;
+        align-items: start;
+        padding: 1rem 1.5rem;
+    }
+    .body .show:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0,);
+        z-index: 1;
+    }
+
+    }
+} */
+
+@media only screen and (max-width: 600px) {
+    #heade {
+        background-color: #dd9a05;
+    }
+    .hero {
+    position: absolute;
+    top: 40%;
+    left: -20%;
+    transform: translate(25%, -50%);
+    color:#fff
+}
+.hero h3 {
+    font-weight: bold;
+    color: yellow;
+    font-size: 3rem;
+}
+.hero h1 {
+    font-size: 3.5rem;    
+}
+.hero h4 {
+    font-size: 2rem;
+}
+.hero h4 span {
+    color: rgb(197, 230, 10);
+    text-decoration: underline;
+}
+.hero h4 span:hover {
+    color: yellow;
+    background-color: red;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5%;
+}
+
+.hero a:link, .hero a:visited {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    border-color: 1px salmon #dd9a05;
+    background-color:#dd9a05;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+.hero a:hover{
+    background-color: transparent;
+}
+
+.ball {
+    display: block;
+    width: 4rem;
+    height: auto;
+}
+.menu1 {
+    display: block;
+}
+    }
+    @media only screen and (max-width:500px){
+     .header .ronaldo {
+        width: 20rem;
+     }
+    }
+
+
+@media only screen and (max-width:768px){
+     .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        max-width: 40rem;
+        background: #fff;
+        transition: all 500ms ease-in-out;
+        z-index: 190;
+     }
+     .menu .show {
+        left: 0;
+     }    
+     .top-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(198, 231, 11);
+        padding: 1rem 1.5rem;
+        }
+     .top-nav .logo span {
+        color: #fff;
+     } 
+     .top-nav .close {
+        color: #fff;
+        font-size: 2.3rem;
+        padding: 1rem;
+        cursor: pointer;
+     }
+    .hamburger {
+        display: block;
+        color: #fff;
+        font-size: 2.5rem;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    .nav-link:link,.nav-link:visited{
+        display: block;
+        font-size: 1.7rem;
+        color: #222;
+        padding: 1rem 0;
+    }
+    .nav-list {
+        flex-direction: column;
+        align-items: start;
+        padding: 1rem 1.5rem;
+    }
+    .body .show:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0,);
+        z-index: 1;
+    } 
+}
+</style>
+
+
+
+
+
+
+    <!-- <script>
+    const close = document.querySelector(".menu");
+    const menu = navOpen.querySelector(".hamburger");
+    const menu = navClose.querySelector(".close");
+    const menu = navBar.querySelector(".nav");
+    const navLeft = menu.getBoundingclientRact().left;
+    
+    navClose.adventlistener("click",()=>(
+        if(navLeft < 0)(
+            menu.classlist.remove("show");
+            document.body.classlist.remove("show");
+            navBar.classlist.remove("show");
+        ) 
+    ));
+
+
+
+
+
+</script> -->

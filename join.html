@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>team</title>
+</head>
+<body>     <form>            <div class="golden">
+  
+  <img class="logo-soli" src="img/logbal.png"><h3 style="color:#124ce7">Lorem ipsum dolor sit amet consectetur adipisi
+                                          cing elit. Voluptas blanditiis voluptatem minus ani
+                                          mi, unde sint voluptatibus excepturi esse qua
+                                          s. Quis esse vero quas beatae maiores? Placeat 
+                                          nesciunt obcaecati laudantium ab.</h3>
+
+  <button class="per-in">Personal Information</button> 
+  
+  <br><br>
+  
+  <div>
+  <label>Surname:</label> 
+     <input name="Surname" type="text" placeholder="Surname" required>
+  </div>
+
+  <br>
+
+  <div>
+    <label>First Name:</label> 
+       <input name="Firstname" id="Name" type="text" placeholder="First Name" required>
+    </div>
+    
+    <br>
+    
+   <div>
+      <label>Others Name:</label> 
+         <input name="Othersname" type="text" placeholder="Others Name" required>
+      </div>
+    
+      <br>
+
+      <div>
+        <label>Date of Birth:</label> 
+           <input name="Birth" type="date" placeholder="date of Birth" required>
+        </div>
+      
+<br>
+
+      <button class="per-in">Contact Details</button> <br>
+  
+        <br>
+<div class="general">
+   <label>House Number</label>
+     <input name="Housenumber" type="number" placeholder="House Number" required><br><br>
+   <label>Street Name</label>
+     <input name="Streetname" type="text" placeholder="Street Name" required><br><br>
+   <label>Nearest Bus Stop</label>
+     <input name="Bus,stop" type="text" placeholder="Nearest Bus Stop" required><br><br>
+   <label>City/Town</label>
+     <input name="city-town" type="text" placeholder="City/Town" required><br><br>
+   <label>State</label>
+     <input name="state" type="text" placeholder="State" required><br><br>
+   <label>Phone Number</label>
+     <input name="phonenumber" type="number" placeholder="Phone Number" required><br><br>
+   <label>Mobile Number</label>
+     <input name="mobile-number" type="number" placeholder="Mobile Number" required>
+</div><br>
+
+<button class="per-in">Declaration</button> <br>
+<div><h4 class="declaration"> i <input name="mee" type="text" placeholder="your name" required> hereby apply for joinig the solicitor football academy. 
+  i understand that the information given herein and the inforation supplied are the basis for joining the team and i therefore warrant 
+  that such information is correct. i haved read the terms and conditions governing the joining process and agree to be bound by them.</h4>    
+ <label>Date:</label>
+   <input name="date" type="date">  <input name="radio" type="radio" required>Agree
+</div> 
+
+<button class="submit" onclick="MyTime()">Submit</button>
+
+</div>
+</form>
+
+<span id="msg"></span>
+
+</body>
+</html>
+
+
+<style>
+
+  .per-in {
+     color: white;
+     background-color: blue;
+     padding: 0.5rem 0.5rem;
+     border-radius: 10%;
+  }
+
+    body{
+        background-image: url("img/field.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: move 5s linear alternate infinite;
+      }
+      @keyframes move{
+        50%{
+          background-position: 50%;
+        }
+      }
+
+
+      .logo-soli {
+        width: 400px;
+        height: auto;
+      }
+
+    .declaration {
+         width: 400px;
+         color: blue;
+    }
+
+    .submit {
+      cursor: pointer;
+      width: 150px;
+      height: 46px;
+      border-radius: 3px;
+      font-size: 22px;
+      margin-top: 28px;
+      color: #fff;
+      background: linear-gradient(
+        0deg, #124ce7, #3784ff
+      );
+     }
+     .submit:hover{
+      color: rgb(63, 10, 107);
+     }
+
+    .golden {
+      border-color: #124ce7;
+      box-shadow: 0 0 12px #1d58c5;
+      width: 400px;
+      height: min-content;
+      padding: 40px;
+      background: whitesmoke;
+      text-align: left;
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    }
+
+   #msg {
+    color: red;
+    margin-top: 10px;
+    display: block;
+   }
+
+.solifoot {
+  color: red;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  
+}
+
+</style>
+
+<script>
+    function MyTime(){
+      var Name = document.getElementById("Name").value;
+    alert(Name + "\n" + "You will receive a SMS text to the phone number you enter after 24houurs");
+    }
+
+const msg = document.getElementById("msg")
+
+form.addEventListener('submit', e => {
+
+  fetch(scripURL, { method: 'POST', body: new formData(form)})
+  .then(Response => {
+    msg.innerHTML = "Message Sent successfully"
+    setTimeout(function(){
+      msg.innerHTML =  ""
+    },5000)
+    form.reset()
+  })
+  .catch(error => console.error('Error', error.message))
+})
+</script>
+
+
+
+

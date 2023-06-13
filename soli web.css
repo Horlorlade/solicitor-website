@@ -1,0 +1,117 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 64%;
+    box-sizing: border-box;
+}
+
+head {
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: white;
+    color: #000;
+}
+
+h1,h2,h3,h4 {
+    font-weight: 500;
+}
+
+* {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+
+.container {
+    max-width: 114rem;
+    margin: auto;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+}
+
+
+
+<div id="About">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="img/social ico.png">   
+                    </div>
+     
+<div class="about-col-2">
+<h1 class="sub-title">About Me</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Itaque, vero dicta obcaecati nobis unde quidem eius, amet 
+    iure repudiandae laborum vel veniam sint ipsam nisi quam 
+    maxime ipsa alias voluptatem. Lorem ipsum dolor 
+    sit amet, consectetur adipisicing elit. Ipsam 
+    numquam sit, rerum aut fuga libero dolores odio aperiam? 
+    Repudiandae quos facilis iusto, doloremque autem quasi. 
+    Eveniet hic minima quod nihil? </p>
+
+    <div class="tab-titles">
+        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+        <p class="tab-links" onclick="opentab('Education')">Education</p>
+    </div>
+    <div class="tab-contents active-tab id" id="'skills">
+        <ul>
+            <li><span>ui/uk</span><br>Solicitor</li>
+            <li><span>Football</span><br>play ball</li>
+            <li><span>Player</span><br>Competitions</li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="experience"></div>
+    <ul>
+        <li><span>2023 - current</span><br>Player
+        football</li>
+        <li><span>2020 - 2022</span><br>Player
+            Solicitor</li>
+            <li><span>2017 - 2020</span><br>Player
+                Messi</li>
+                <li><span>2016 - 2017</span><br>Player
+                    solialayer</li>
+    </ul>
+</div>
+<div class="tab-contents" id="education"></div>
+<ul>
+<li><span>2016</span><br>Solicitor</li>
+<li><span>2019</span><br>Footballer</li>
+<li><span>2023</span><br>Player</li>
+</ul>
+</div>
+</div>
+</div>
+
+<script>
+var tablinks = document.getElementByclassName("tab-links");
+var tabcontents = document.getElementByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tabcontent.clssList.remove("active-tab");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.clssList.remove("active-tab");
+    }
+   event.currentTarget.classlist.add("active-link");
+   document.getElementById(tabname).classList.add("active-tab");
+}
+</script>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+<body>
+         
+
+    <h3 style="color: rgb(45, 166, 223);">
+        <div class="opay">You are Here to Make Your Payment</div>  
+        <hr>
+        <div class="opay-1"><span>Account Number:</span> 0123456789</div> 
+        <div class="opay-2"><span>Account Name:</span> Solicitor Football Academy</div>
+        <div class="opay-3"><span>Bank Name:</span> <img class="gtb" src="img/gtlog.png"> GT Bank</div> 
+<div class="opay-4"></div>Make Sure You Have Send the Money Before You Enter Details to Confirm Payment</div> </h3>
+      
+      
+    <div class="contact-right">
+      <form>
+        <input type="text" name="Hireing Name" placeholder="Your Team Name" required>
+        <input type="number" name="Hireing Number" placeholder="Your Phone Number" required>
+        <input type="text" name="Name" placeholder="Account Name" required>
+        <input type="number" name="Account Number" placeholder="Your Account Number" required>
+        <input type="text" name="Name" placeholder="Bank Name" required>
+        <input type="number" name="Ammount" id="Name" placeholder="Ammount send" required>
+        <label>Date:</label><input type="date" name="Date" placeholder="Date" required>
+        <button class="submit" onclick="MyTime()">Confirm Payment</button>
+                     <span id="msg"></span>  
+                 
+    </form>
+    </div>
+   
+</body>
+</html>
+
+
+
+
+<script>
+  function MyTime() {
+    var Name = document.getElementById("Name").value;
+
+  alert(Name + "\n" + "Are You Sure This Are Correct <br> if yes you will receive a text message after 10minutes");
+  }
+</script>
+
+
+
+<style>
+
+  body {
+    background-image:url(bcc.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;  
+  }
+
+    .submit {
+       display: inline-block; 
+       color: yellow;
+       font-size: 20px;
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+       background-color: red;
+       padding: 10px;
+       border-radius: 10px;
+    }
+
+    .submit:hover {
+        background: blue;
+        color: #fff;
+    }
+
+   .contact-right form {
+        width: 50%;
+   } 
+
+   form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: rgb(162, 162, 226);
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+
+   }
+  form.btn {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin: 20px;
+    cursor: pointer;
+  }
+
+  
+  .copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: darkblue;
+    font-weight: 300;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .copyright i{
+     color: #fff;
+  }
+
+ .gtb {
+    width: 20px;
+    height: auto;
+ }
+ 
+
+ span {
+  color: rgb(118, 82, 248);
+  font-weight: bold;
+ }
+
+#msg {
+  color: black;
+  font-weight: bold;
+}
+
+label {
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h3 {
+  background-color: rgb(8, 8, 70);
+  width: 450px;
+  height: 145px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 20px;
+}
+
+.opay {
+  color: rgb(0, 255, 234);
+}
+
+</style>
+
+
+
+<script>
+  const msg = document.getElementById("msg") 
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(Response => {
+      msg.innerHTML = "You Will received your Logo after 24hours to the Whatsapp Number You Enter If Your Payment is Real."
+      setTimeout(function(){
+      msg.innerHTML = ""
+    }, 5000)
+    form.reset()
+    })
+    </script>
+
+
+
